@@ -40,7 +40,15 @@ public class User {
         return name;
     }
 
-    public void setName(String name) {
+@Override
+public String toString() {
+    return "id: " + id +
+            ", name: '" + name + '\'' +
+            ", lastName: '" + lastName + '\'' +
+            ", age: " + age;
+}
+
+public void setName(String name) {
         this.name = name;
     }
 
