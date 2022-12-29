@@ -103,7 +103,7 @@ public UserDaoHibernateImpl() {
         Session session = Util.getSessionFactory().openSession();
         try {
             session.beginTransaction();
-            session.createSQLQuery("truncate table users").executeUpdate();
+            session.createQuery("delete from User").executeUpdate();
             session.getTransaction().commit();
         } catch (Exception e) {
             System.err.println("Failed to clean table!");
